@@ -35,8 +35,8 @@
 
 	} else {
 		define('OP_RETURN_BITCOIN_PORT',''); // leave empty to use default port for mainnet/testnet
-		define('OP_RETURN_BITCOIN_USER', 'torella'); // leave empty to read from ~/.bitcoin/bitcoin.conf (Unix only)
-		define('OP_RETURN_BITCOIN_PASSWORD', 'ftrt67tty89'); // leave empty to read from ~/.bitcoin/bitcoin.conf (Unix only)
+		define('OP_RETURN_BITCOIN_USER', ''); // leave empty to read from ~/.bitcoin/bitcoin.conf (Unix only)
+		define('OP_RETURN_BITCOIN_PASSWORD', ''); // leave empty to read from ~/.bitcoin/bitcoin.conf (Unix only)
 	}
 	
 	define('OP_RETURN_BTC_FEE', 0.001); // BTC fee to pay per transaction
