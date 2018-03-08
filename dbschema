@@ -1,0 +1,19 @@
+CREATE TABLE `transaction` (
+  `idtransaction` int(11) NOT NULL AUTO_INCREMENT,
+  `txid` varchar(64) DEFAULT NULL,
+  `id_user` varchar(45) DEFAULT NULL,
+  `file_name` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idtransaction`),
+  UNIQUE KEY `idtransaction_UNIQUE` (`idtransaction`),
+  UNIQUE KEY `txid_UNIQUE` (`txid`)
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `users` (
+  `id_user` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_user`),
+  UNIQUE KEY `idusers_UNIQUE` (`id_user`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
