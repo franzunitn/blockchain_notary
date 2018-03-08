@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blockchain notary</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<input name="myFile" type="file" id="file">
+    <button id="submit">Submit</button>
+   
+
+
+
+    
+    
+<script type="text/javascript" src="hashes.js"></script>
+    <script type="text/javascript">
+            
+            document.getElementById("submit").addEventListener("click", function(){
+            var files=document.getElementById("file").files;
+            var file1=files[0];
+            //document.write(file1.name);
+            var reader = new FileReader();
+            
+            reader.onload = function(event) {
+                var dataURL = event.target.result;
+                console.log(dataURL);
+                // new SHA256 instance and hexadecimal string encoding
+                var SHA256file1= new Hashes.SHA256().hex(dataURL);
+                document.write(SHA256file1);
+            };
+            
+        reader.readAsDataURL(file1);
+        
+        });
+        
+    
+    
+    
+    </script>
+</body>
+</html>
